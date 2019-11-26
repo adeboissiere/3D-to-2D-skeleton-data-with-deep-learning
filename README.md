@@ -54,7 +54,7 @@ Results
 ------------
 We split the entire NTU RGB+D dataset into a 50-50 train/test sets. We do not use a validation set. The reasoning behind this is as follows. The problem is simple enough. The MLP simply has to approximate an existing transformation (see Kinect v2 documentation). Plus, the training data is chosen in such a way that it is unlikely for the network to study the same point 2 times. 
 
-In just 5 epochs, with a network weighing just 4kb, we are able to approximate 2D IR skeleton coordinates with an error in the 5-10 pixels range. 
+In just 5 epochs, with a network weighing just 4kb, we are able to approximate 2D IR skeleton coordinates with an error in the 5-10 pixels range. We provide the model for each epoch in the *./models/* folder.
 
 Better results can probably be obtained with a better use of the data and augmentation but the goal for this project was to be quickly operational. 
 
