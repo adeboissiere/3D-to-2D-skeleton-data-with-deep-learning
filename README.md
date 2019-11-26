@@ -35,13 +35,16 @@ The first step to replicate our results is to download the project and create a 
 The data used comes from the [NTU RGB+D dataset](http://rose1.ntu.edu.sg/datasets/actionrecognition.asp). Make sure to download the skeleton data and create two .h5 datasets with our code from our [GitHub repository](https://github.com/gnocchiflette/NTU-RGB-D). The two datasets are the "SKELETON" dataset and the "IR_SKELETON" dataset.
 
  1. Clone project
+
     `git clone https://github.com/gnocchiflette/3D-to-2D-skeleton-data-with-deep-learning.git `
 
 2. Create virtual environment 
+
     `make create_environment `
 
 3. Install requirements
-`make requirements` 
+
+    `make requirements` 
 
 4. Place the two .h5 datasets in the *./data/processed/* folder. This folder already contains a text file containing the names of all the samples from the NTU RGB+D database called *samples_names.txt*.
 
@@ -54,6 +57,8 @@ We split the entire NTU RGB+D dataset into a 50-50 train/test sets. We do not us
 In just 5 epochs, with a network weighing just 4kb, we are able to approximate 2D IR skeleton coordinates with an error in the 5-10 pixels range. 
 
 Better results can probably be obtained with a better use of the data and augmentation but the goal for this project was to be quickly operational. 
+
+Below is the loss per epoch during training.
 
 ![Loss plot](./reports/figures/train_loss.png)
 
