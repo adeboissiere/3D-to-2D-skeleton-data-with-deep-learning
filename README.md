@@ -4,6 +4,8 @@
 
 This mini-project aims to estimate 2D skeleton data from 3D skeleton data. More specifically 2D skeleton data for IR frames from the kinect v2. Exact formulas exist, but we are too lazy to implement them ourselves. The motivation behind this work is that the [NTU RGB+D](http://rose1.ntu.edu.sg/datasets/actionrecognition.asp) dataset provides 2D IR skeleton data, while the [PKU MMD](http://www.icst.pku.edu.cn/struct/Projects/PKUMMD.html) action dataset does not. And we need them.
 
+Note that although a similar approach for 2D RGB skeleton would be similar, the IR and RGB spaces are different and thus would require different labels (also available available in the NTU RGB+D dataset).
+
 Project Organization
 ------------
 
