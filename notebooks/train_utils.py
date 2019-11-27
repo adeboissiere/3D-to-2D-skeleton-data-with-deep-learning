@@ -113,8 +113,8 @@ def eval_test_set(model, test_generator):
             if batch_idx % 10 == 0:
                 print("Batch : " + str(batch_idx) + " / " + str(len(test_generator))) 
                 print("Random point prediction :")
-                print("-> True : (" + str(int(Y[0, 0].item() * 424)) + ", " + str(int(Y[0, 1].item() * 512)) + ")")
-                print("-> Pred : (" + str(int(out[0, 0].item() * 424)) + ", " +  str(int(out[0, 1].item() * 512)) + ")")
+                print("-> True : (" + str(int(Y[0, 0].item() * 512)) + ", " + str(int(Y[0, 1].item() * 424)) + ")")
+                print("-> Pred : (" + str(int(out[0, 0].item() * 512)) + ", " +  str(int(out[0, 1].item() * 424)) + ")")
                 print("-> Loss : " + str(loss.item()))
                 print()
 

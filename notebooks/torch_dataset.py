@@ -25,8 +25,8 @@ class TorchDataset(torch.utils.data.Dataset):
         # Get 2D joint
         with h5py.File(self.data_path + "ir_skeleton.h5", 'r') as skeleton_3d_h5:
             joint_2d = skeleton_3d = skeleton_3d_h5[sample_name]["ir_skeleton"][:, random_frame, random_joint, 0]
-            joint_2d[0] = joint_2d[0] / 424
-            joint_2d[1] = joint_2d[1] / 512
+            joint_2d[0] = joint_2d[0] / 512
+            joint_2d[1] = joint_2d[1] / 424
             
             # Replace NaN with zero
             joint_2d[np.isnan(joint_2d)] = 0
